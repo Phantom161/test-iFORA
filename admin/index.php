@@ -1,12 +1,13 @@
 <?php
-require "../config.php"; // подключаем конфиг
-// Подключение к базе данных
+// подключаем конфиг
+require_once "../config.php";
+// Подключаемся к базе данных
 $link = mysqli_connect($host, $user, $password, $database)
 or die("Ошибка " . mysqli_error($link));
-
+// получаем значения из базы данных
 $sql = 'SELECT * FROM ifora_data';
 $result = mysqli_query($link, $sql);
-
+// извлекам все строки и помещаем их в массив
 $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 ?>
@@ -50,6 +51,7 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                         </thead>
                                         <tbody>
                                         <?php
+                                        // Заполняем таблицу данными из бд
                                         foreach ($rows as $row) {
                                             print("<tr><td>" . $row['name'] . "</td><td>" . $row['contact'] . "</td><td>" . $row['date'] . "</td><td>" . $row['time'] . "</td></tr>");
                                         }
@@ -62,8 +64,8 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     // имя файла, отдаваемого пользователю
                                     $fileNameNew = $dir . '/' . dataexport . ".csv";
                                     // формируем заголовок таблицы csv
-                                    file_put_contents($fileNameNew, "name;contact;date;time\n");
-                                    // формируем тело таблицы
+                                    file_put_contents($fileNameNew, "id;name;contact;date;time\n");
+                                    // формируем тело таблицы и сохраняем файл
                                     for ($i = 0; $i < count($rows); $i++) {
                                         $str = implode(";", $rows[$i]) . "\n";
                                         file_put_contents($fileNameNew, $str, FILE_APPEND);
