@@ -1,0 +1,21 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 1.42857143;
+	color: #333;
+	background-size: cover;
+    background: #eeeeee url(../img/background.jpg) no-repeat fixed center;
+}
+
+.table-ui {
+	border: 1px solid #e0e0e9;
+}
+
+select {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: inline-block !important;
+}
+
+.badge {
+    font-size: 1em;
+}
