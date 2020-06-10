@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/mdb.min.css" rel="stylesheet">
-    <link href="/css/addons/datatables.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -84,7 +83,6 @@
 <script type="text/javascript" src="/js/popper.min.js"></script>
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/js/mdb.min.js"></script>
-<script type="text/javascript" src="/js/addons/datatables.min.js"></script>
 <script type="text/javascript" src="/js/common.js"></script>
 </body>
 </html>
