@@ -72,7 +72,7 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
                                     }
                                     ?>
                                     <hr class="my-0">
-                                    <a class="btn btn-primary" href="<?= $fileNameNew ?>">
+                                    <a class="btn btn-primary" href="<?= $fileNameNew ?>" target="_blank" download="">
                                         <i class="fas fa-download"></i> Экспорт в csv
                                     </a>
                                     <a href="/" class="btn btn-danger">Страница с формой</a>

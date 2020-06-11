@@ -14,18 +14,14 @@ $query ="CREATE Table IF NOT EXISTS ifora_data
     time time NOT NULL
 )";
 $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
-// Переменные с формы
-$name = $_POST['name'];
-$contact = $_POST['contact'];
-$date = $_POST['date'];
-$time = $_POST['time'];
 // Почта администратора
 $recepient = "test@gmail.com";
-// Отправляем письмо с данными
+// Переменные с формы
 $name = trim($_POST["name"]);
 $contact = trim($_POST["contact"]);
 $date = trim($_POST["date"]);
 $time = trim($_POST["time"]);
+// Отправляем письмо с данными
 $message = "ФИО: $name \nКонтактная информация: $contact \nДата показа: $date \nВремя показа: $time";
 $pagetitle = "Данные с формы";
 mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
