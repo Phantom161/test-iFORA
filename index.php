@@ -32,7 +32,7 @@
             </section>
             <section>
                 <div class="table-ui p-2 mb-3 mx-4 mb-5">
-                    <form class="text-center" method="POST" action="mail.php" id="form"
+                    <form class="text-center" method="POST" id="form"
                           enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-xl-4 col-md-6">
